@@ -25,7 +25,7 @@ im2 = im2 - np.mean(im2)
 # Output information about the image dimensions.
 a = im1.shape
 n = a[0]
-print "Number of samples: ", n
+print ("Number of samples: ", n)
 n = n * 1.0
 
 time = np.arange(0, n, 1)
@@ -57,6 +57,8 @@ plt.plot(xn[0], xn[1], '*b')
 plt.ylabel('Signal 2')
 plt.xlabel('Signal 1')
 plt.title("Whitened data")
+
+plt.show()
 
 # Perform FOBI.
 norm_xn = LA.norm(xn, axis=0)
