@@ -10,8 +10,8 @@ from scipy import linalg as LA
 
 # Input the data from the first receiver.
 samplingRate, signal1 = wavfile.read('sourceSounds/mix1.wav')
-print "Sampling rate = ", samplingRate
-print "Data type is ", signal1.dtype
+print ("Sampling rate = ", samplingRate)
+print ("Data type is ", signal1.dtype)
 
 # Convert the signal so that amplitude lies between 0 and 1.
 signal1 = signal1 / 255.0 - 0.5  # uint8 takes values from 0 to 255
@@ -19,7 +19,7 @@ signal1 = signal1 / 255.0 - 0.5  # uint8 takes values from 0 to 255
 # Output information about the sound samples.
 a = signal1.shape
 n = a[0]
-print "Number of samples: ", n
+print ("Number of samples: ", n)
 n = n * 1.0
 
 # Input data from the first receiver and standardise it's amplitude.
@@ -99,3 +99,4 @@ plt.plot(time, orig2, color='k')
 plt.ylabel('Amplitude')
 plt.xlabel('Time (ms)')
 plt.title("Original signal 2")
+plt.show()
